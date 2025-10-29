@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export const Header = () => {
@@ -5,12 +6,12 @@ export const Header = () => {
     <header className="py-5 px-10 border-b flex justify-between items-center">
       <div>
         <h1 className="text-2xl font-extrabold">
-          <a href="/">Next.js13 Blog</a>
+          <Link href="/">Next.js13 Blog</Link>
         </h1>
       </div>
       <div>
         <nav className="text-sm font-medium">
-          <a href="/articles/new" className="bg-orange-300 px-3 py-3 rounded-md">記事を書く</a>
+          <Link href="/articles/new" className="bg-orange-300 px-3 py-3 rounded-md">記事を書く</Link>
         </nav>
       </div>
     </header>

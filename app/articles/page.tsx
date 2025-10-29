@@ -1,12 +1,7 @@
 import React from "react";
 
-const page = () => {
-  return (
-    <>
-      <div>article</div>
-      <p></p>
-    </>
-  );
+const Articles = () => {
+  return <div>記事作成</div>;
 };
 
-export default page;
+export default Articles;
