@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Next.js",
+      "content": "Next.jsを学んでいます",
+      "createdAt": "2025/10/30"
+    },
+    {
+      "id": "2",
+      "title": "React",
+      "content": "Reactを学んでいます",
+      "createdAt": "2025/10/30"
+    }
+  ]
+}
