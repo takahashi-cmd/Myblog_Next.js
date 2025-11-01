@@ -2,9 +2,11 @@
 import React from "react";
 import { useParams } from "next/navigation";
 import Image from "next/image";
+import { getDetailArticle } from "@/app/blogAPI";
 
 const Article = () => {
-  const params = useParams();
+  const params = useParams<{ id: string }>();
+  const detailArticle = getDetailArticle(params.id);
   return (
     <div className="max-w-3xl mx-auto p-5">
       <Image
