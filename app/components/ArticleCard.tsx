@@ -7,7 +7,7 @@ type ArticleCardProps = {
   article: Article;
 };
 
-const ArticleCard = ({article}: ArticleCardProps) => {
+const ArticleCard = ({ article }: ArticleCardProps) => {
   return (
     <article className="shadow my-4 flex flex-col" key={article.id}>
       <Link href={`articles/${article.id}`} className="hover:opacity-75">
@@ -29,7 +29,7 @@ const ArticleCard = ({article}: ArticleCardProps) => {
           {article.title}
         </Link>
         <p className="text-sm pb-3 text-slate-900">
-          By hiro published on {article.createdAt}
+          By hiro published on {new Date(article.createdAt).toLocaleString()}
         </p>
         <Link href={`articles/${article.id}`} className="text-slate-900 ph-6">
           {article.content.length > 70

@@ -13,7 +13,15 @@ const CreateBlogPage = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    await createArticle(id, title, content);
+    // await createArticle(id, title, content);
+    const API_URL = process.env.NEXT_PUBLIC_API_URL;
+    await fetch(`${API_URL}/api/create`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id, title, content }),
+    });
     setLoading(false);
     router.push("/");
     router.refresh();
@@ -54,10 +62,8 @@ const CreateBlogPage = () => {
         <button
           type="submit"
           className={`py-2 px-4 border rounded-md ${
-            loading
-              ? "cursor-not-allowed"
-              : "bg-orange-400 hover:bg-orange-500"
-            }`}
+            loading ? "cursor-not-allowed" : "bg-orange-400 hover:bg-orange-500"
+          }`}
           disabled={loading}
         >
           投稿
