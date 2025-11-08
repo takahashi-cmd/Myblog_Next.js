@@ -20,6 +20,9 @@ export async function GET(request: NextRequest, {params}:{params:Promise<{id: st
   return NextResponse.json(posts);
 }
 
+// 記事を編集
+
+
 // 記事を削除
 export async function DELETE(
   request: NextRequest,
